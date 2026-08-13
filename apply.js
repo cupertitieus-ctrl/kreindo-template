@@ -30,3 +30,26 @@
     return "<li><div class='n'>" + x.n + "</div><div><h3>" + x.t + "</h3><p>" + x.d + "</p></div></li>";
   }).join("");
 })();
+
+(function () {
+  var proof = document.getElementById("proof");
+  if (proof && !proof.parentElement.classList.contains("proof-pin")) {
+    var wrap = document.createElement("div");
+    wrap.className = "proof-pin";
+    proof.parentNode.insertBefore(wrap, proof);
+    wrap.appendChild(proof);
+  }
+  var process = document.getElementById("process");
+  if (process && !process.parentElement.classList.contains("process-pin")) {
+    var wrap2 = document.createElement("div");
+    wrap2.className = "process-pin";
+    process.parentNode.insertBefore(wrap2, process);
+    wrap2.appendChild(process);
+  }
+  if (!document.querySelector(".progress")) {
+    var bar = document.createElement("div");
+    bar.className = "progress";
+    bar.setAttribute("aria-hidden", "true");
+    document.body.appendChild(bar);
+  }
+})();
