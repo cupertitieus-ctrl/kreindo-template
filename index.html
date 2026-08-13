@@ -12,19 +12,19 @@
 <body>
   <div class="noise" aria-hidden="true"></div>
   <header class="nav">
-    <a class="logo" href="index.html" data-name>YOUR SHOP</a>
+    <a class="logo" href="#top" data-name>YOUR SHOP</a>
     <nav class="nav-links">
       <a href="#services">Services</a>
+      <a href="#proof">Proof</a>
       <a href="#process">Process</a>
-      <a href="about.html">About</a>
       <a href="#contact">Contact</a>
     </nav>
     <a class="btn btn-sm" href="#contact" data-nav-cta>Call now</a>
   </header>
-  <main>
+  <main id="top">
     <section class="hero">
-      <p class="eyebrow" data-eyebrow>Phoenix · Local service</p>
-      <h1 data-hero>A site that makes people <em>call</em>.</h1>
+      <p class="eyebrow" data-eyebrow></p>
+      <h1 data-hero></h1>
       <p class="lede" data-lede></p>
       <div class="hero-cta">
         <a class="btn" href="#contact" data-cta data-cta-href>Book a visit</a>
@@ -33,27 +33,31 @@
       <div class="chips" data-chips></div>
     </section>
     <section class="section" id="services">
+      <p class="kicker">Services</p>
       <div class="grid" data-cards></div>
     </section>
+    <section class="section proof" id="proof">
+      <p class="kicker">Proof</p>
+      <p data-proof></p>
+      <p class="muted" data-proof-by></p>
+    </section>
     <section class="section" id="process">
-      <p class="kicker">Our process</p>
+      <p class="kicker">How it works</p>
       <ol class="steps" data-steps></ol>
     </section>
     <section class="section contact" id="contact">
-      <p class="kicker">Request a site</p>
+      <p class="kicker">Book a visit</p>
       <form onsubmit="event.preventDefault(); this.querySelector('[type=submit]').textContent='Got it';">
         <div class="row3">
           <label>Name <input required name="name" /></label>
-          <label>Email <input required type="email" name="email" /></label>
           <label>Phone <input required name="phone" /></label>
+          <label>Email <input type="email" name="email" /></label>
         </div>
-        <label>Shop name <input name="shop" /></label>
-        <label>Tell us about your shop and your goals <textarea required rows="4" name="msg"></textarea></label>
-        <button class="btn" type="submit">Request a site</button>
+        <label>What do you need? <textarea required rows="4" name="msg"></textarea></label>
+        <button class="btn" type="submit" data-cta>Book a visit</button>
       </form>
     </section>
   </main>
-
   <footer>© <span data-name>YOUR SHOP</span>. All rights reserved.</footer>
   <script src="config.js"></script>
   <script src="apply.js"></script>
