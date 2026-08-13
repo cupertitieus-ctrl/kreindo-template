@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title></title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,400;9..40,600;9..40,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <a class="logo" href="index.html" data-name></a>
+    <nav>
+      <a href="index.html" class=on>Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a class="btn btn-sm" href="contact.html" data-cta></a>
+    </nav>
+  </header>
+  <section class="hero">
+    <div>
+      <p class="muted" style="letter-spacing:.08em;text-transform:uppercase;font-size:.8rem;font-weight:700;color:var(--warm);margin-bottom:1rem" data-city></p>
+      <h1 data-hero></h1>
+      <p class="lede" data-hero-sub></p>
+      <div class="hero-cta">
+        <a class="btn" href="contact.html" data-cta></a>
+        <a class="btn btn-ghost" href="tel:+16025550148" data-phone-link>Call now</a>
+      </div>
+      <div class="proof">
+        <span><strong data-rating></strong> Google</span>
+        <span><strong data-reviews></strong> reviews</span>
+        <span><strong data-years></strong> years local</span>
+      </div>
+    </div>
+    <div class="photo" role="img" aria-label="Client photo slot — swap in config"></div>
+  </section>
+  <div class="band wrap" data-offer></div>
+  <section class="section">
+    <h2>Why people hire us</h2>
+    <p class="muted" style="margin-bottom:1.2rem">No fluff. A site that answers “should I call them?” in 8 seconds.</p>
+    <div class="grid cards">
+      <div class="card"><h3>Show up first</h3><p>One clear offer. One phone number. No mystery menus.</p></div>
+      <div class="card"><h3>Proof, not poetry</h3><p>Reviews, years in town, and what happens after they tap the button.</p></div>
+      <div class="card"><h3>Built to book</h3><p>Mobile-first, fast load, contact on every page. That’s the product.</p></div>
+    </div>
+  </section>
+  <section class="cta-block">
+    <h2>Ready this week?</h2>
+    <p class="muted" style="margin-bottom:1.2rem" data-offer></p>
+    <a class="btn" href="contact.html" data-cta></a>
+  </section>
+
+  <footer>
+    <span data-name></span>
+    <span>A Kreindo site · $200/mo</span>
+  </footer>
+  <script src="config.js"></script>
+  <script src="apply.js"></script>
+</body>
+</html>
