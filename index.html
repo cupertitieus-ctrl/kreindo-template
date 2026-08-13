@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Your shop</title>
+  <title>YOUR SHOP</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,400;9..40,600;9..40,700&display=swap" rel="stylesheet" />
@@ -12,50 +12,49 @@
 <body>
   <div class="noise" aria-hidden="true"></div>
   <header class="nav">
-    <a class="logo" href="index.html" data-name>Your shop</a>
-    <nav>
-      <a href="index.html">Home</a>
+    <a class="logo" href="index.html" data-name>YOUR SHOP</a>
+    <nav class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
       <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <a class="btn btn-sm" href="contact.html" data-cta>Get a quote</a>
+      <a href="#contact">Contact</a>
     </nav>
+    <a class="btn btn-sm" href="#contact" data-nav-cta>Call now</a>
   </header>
   <main>
     <section class="hero">
-      <p class="eyebrow" data-city>Your city</p>
-      <h1 data-hero>A site that makes people <em>buy</em>.</h1>
+      <p class="eyebrow" data-eyebrow>Phoenix · Local service</p>
+      <h1 data-hero>A site that makes people <em>call</em>.</h1>
       <p class="lede" data-lede></p>
-      <a class="btn" href="contact.html" data-cta>Get a quote</a>
+      <div class="hero-cta">
+        <a class="btn" href="#contact" data-cta data-cta-href>Book a visit</a>
+        <a class="btn btn-ghost" href="#services" data-secondary data-secondary-href>See hours</a>
+      </div>
       <div class="chips" data-chips></div>
     </section>
     <section class="section" id="services">
-      <h2>What you get</h2>
-      <p class="muted">The offer, not a tour of your personality.</p>
-      <div class="grid" data-services></div>
+      <div class="grid" data-cards></div>
     </section>
-    <section class="section proof">
-      <h2>Proof</h2>
-      <p data-proof></p>
-    </section>
-    <section class="section">
-      <h2>Process</h2>
+    <section class="section" id="process">
+      <p class="kicker">Our process</p>
       <ol class="steps" data-steps></ol>
     </section>
     <section class="section contact" id="contact">
-      <h2>One form</h2>
-      <p class="muted" data-offer></p>
-      <form onsubmit="event.preventDefault(); this.querySelector('button').textContent='Got it';">
-        <label>Name <input required name="name" /></label>
-        <label>Phone <input required name="phone" /></label>
-        <label>What do you need? <textarea required rows="3" name="msg"></textarea></label>
-        <button class="btn" type="submit" data-cta>Get a quote</button>
+      <p class="kicker">Request a site</p>
+      <form onsubmit="event.preventDefault(); this.querySelector('[type=submit]').textContent='Got it';">
+        <div class="row3">
+          <label>Name <input required name="name" /></label>
+          <label>Email <input required type="email" name="email" /></label>
+          <label>Phone <input required name="phone" /></label>
+        </div>
+        <label>Shop name <input name="shop" /></label>
+        <label>Tell us about your shop and your goals <textarea required rows="4" name="msg"></textarea></label>
+        <button class="btn" type="submit">Request a site</button>
       </form>
     </section>
   </main>
-  <footer>
-    <span data-name>Your shop</span>
-    <span>A Kreindo site</span>
-  </footer>
+
+  <footer>© <span data-name>YOUR SHOP</span>. All rights reserved.</footer>
   <script src="config.js"></script>
   <script src="apply.js"></script>
 </body>
