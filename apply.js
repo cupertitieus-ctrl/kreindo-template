@@ -1,6 +1,6 @@
 (function () {
   var s = window.SITE || {};
-  document.title = (s.name || "YOUR SHOP") + " — Kreindo";
+  document.title = s.name || "YOUR SHOP";
   function t(sel, val) {
     document.querySelectorAll(sel).forEach(function (el) { el.textContent = val || ""; });
   }
@@ -10,6 +10,8 @@
   t("[data-cta]", s.cta);
   t("[data-secondary]", s.secondary);
   t("[data-nav-cta]", s.navCta);
+  t("[data-proof]", s.proof);
+  t("[data-proof-by]", s.proofBy);
   document.querySelectorAll("[data-cta-href]").forEach(function (el) { el.setAttribute("href", s.ctaHref || "#contact"); });
   document.querySelectorAll("[data-secondary-href]").forEach(function (el) { el.setAttribute("href", s.secondaryHref || "#services"); });
   var h = document.querySelector("[data-hero]");
