@@ -61,6 +61,39 @@ footer { text-align: center; padding: 1.6rem 1.5rem 2.2rem; color: var(--muted);
   .chips span { padding: 0; border: 0 !important; }
   .hero-cta { justify-content: flex-start; }
 }
-
 .proof p[data-proof] { font-family: var(--display); font-size: clamp(1.5rem, 3vw, 2rem); line-height: 1.2; max-width: 34rem; margin: 0 auto 0.7rem; }
 .proof [data-proof-by] { text-align: center; }
+.progress { position: fixed; top: 0; left: 0; height: 2px; width: 100%; background: var(--accent); transform: scaleX(0); transform-origin: 0 50%; z-index: 80; pointer-events: none; }
+#proof { min-height: 70vh; display: flex; flex-direction: column; justify-content: center; }
+.proof-pin { height: 170vh; }
+.process-pin { height: 150vh; }
+#proof, #process { position: sticky; top: 16vh; }
+@keyframes rise {
+  from { opacity: 0; transform: translateY(22px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes growx {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+.hero > * { animation: rise 0.5s cubic-bezier(.2,.7,.2,1) both; }
+.hero > *:nth-child(1) { animation-delay: .02s; }
+.hero > *:nth-child(2) { animation-delay: .08s; }
+.hero > *:nth-child(3) { animation-delay: .14s; }
+.hero > *:nth-child(4) { animation-delay: .2s; }
+.hero > *:nth-child(5) { animation-delay: .26s; }
+.card, .steps li, #contact form, #proof [data-proof] {
+  animation: rise 0.5s cubic-bezier(.2,.7,.2,1) both;
+  animation-timeline: view();
+  animation-range: entry 0% entry 35%;
+}
+.progress { animation: growx 1s linear; animation-timeline: scroll(); }
+@media (max-width: 800px) {
+  .proof-pin, .process-pin { height: auto; }
+  #proof, #process { position: static; top: auto; min-height: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero > *, .card, .steps li, #contact form, #proof [data-proof], .progress { animation: none; }
+  .proof-pin, .process-pin { height: auto; }
+  #proof, #process { position: static; }
+}
