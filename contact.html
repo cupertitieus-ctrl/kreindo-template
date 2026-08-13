@@ -3,36 +3,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title></title>
+  <title>Your shop</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,400;9..40,600;9..40,700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <div class="noise" aria-hidden="true"></div>
   <header class="nav">
-    <a class="logo" href="index.html" data-name></a>
+    <a class="logo" href="index.html" data-name>Your shop</a>
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
-      <a href="contact.html" class=on>Contact</a>
-      <a class="btn btn-sm" href="contact.html" data-cta></a>
+      <a href="contact.html">Contact</a>
+      <a class="btn btn-sm" href="contact.html" data-cta>Get a quote</a>
     </nav>
   </header>
-  <section class="section">
-    <h2>Book the inspection</h2>
-    <p class="muted" style="margin-bottom:1.2rem">Call <a data-phone-link data-phone></a> or send this. We reply the same day.</p>
-    <form onsubmit="event.preventDefault(); this.querySelector('button').textContent='Got it — we will call you';">
-      <label>Name <input required name="name" /></label>
-      <label>Phone <input required name="phone" /></label>
-      <label>What’s going on? <textarea required rows="3" name="msg"></textarea></label>
-      <button class="btn" type="submit">Send</button>
-    </form>
-  </section>
-
+  <main>
+    <section class="section contact">
+      <h2>Contact</h2>
+      <p class="muted">One form. One button.</p>
+      <form onsubmit="event.preventDefault(); this.querySelector('button').textContent='Got it';">
+        <label>Name <input required name="name" /></label>
+        <label>Phone <input required name="phone" /></label>
+        <label>What do you need? <textarea required rows="3" name="msg"></textarea></label>
+        <button class="btn" type="submit" data-cta>Get a quote</button>
+      </form>
+    </section>
+  </main>
   <footer>
-    <span data-name></span>
-    <span>A Kreindo site · $200/mo</span>
+    <span data-name>Your shop</span>
+    <span>A Kreindo site</span>
   </footer>
   <script src="config.js"></script>
   <script src="apply.js"></script>

@@ -1,5 +1,3 @@
-# Kreindo $200/mo client template
+# Kreindo $200/mo template
 
-Home / About / Contact. Fast static site. Swap `config.js` (name, city, phone, colors, copy). Drop real photos over the `.photo` blocks.
-
-Host: Cloudflare Pages (project per client, custom domain). This folder is the deploy root.
+House look (LOOK.md). Placeholders only until a real client. Swap `config.js`.
