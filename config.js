@@ -3,7 +3,7 @@ window.SITE = {
   name: "YOUR SHOP",
   eyebrow: "Phoenix · Local service",
   hero: "Look sharp. Get the call.",
-  heroEm: "Get",
+  heroEm: "call",
   lede: "Walk-ins and bookings. Modern cuts, no attitude. The chair’s ready this week.",
   cta: "Book a visit",
   ctaHref: "#contact",
